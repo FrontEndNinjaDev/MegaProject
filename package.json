@@ -1,0 +1,19 @@
+{
+  "name": "megaproject",
+  "version": "1.0.0",
+  "description": "a backend in megaproject",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Ankit Pratap",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

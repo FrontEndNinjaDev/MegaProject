@@ -1,10 +1,21 @@
 // console.log('hello world ');
 // require('dotenv').config({path : './env'})
+
 import dotenv from 'dotenv'
 
 import connectDB from './db/index.js';
-
+// when the database is connecting its returning promise so we use .then
 connectDB()
+
+.then(()=>{
+    app.listen(process.env.PORT || 8000,()=>{
+        console.log(`Server is running at port : ${process.env.PORT}`);
+    })
+})
+
+.catch((error)=>{
+    console.log('mongo db connection failed ' ,error);
+})
 // config is taking an object so we are defining the path of the env 
 // but its not gonna run use this on package.json on dev -r dotenv/config --experimental-json-modules
 dotenv.config({

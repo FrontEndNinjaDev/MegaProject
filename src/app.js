@@ -36,6 +36,14 @@ app.use(express.static('public'))
 
 app.use(cookieParser())
  
+// routes 
 
+import userRouter from './routes/user.routes.js'
+
+// routes declaration 
+// we cannot use app.get becoz we extracted the route so we are going to use app.use
+// we are giving its routes on userRouter
+
+app.use('/api/v1/users',userRouter)
 
 export { app }

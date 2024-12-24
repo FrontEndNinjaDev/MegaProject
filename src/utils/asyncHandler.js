@@ -1,7 +1,7 @@
 // when we use connectdb its taking time,so we are using aync await 
 
 const asyncHandler = (requestHandler) =>{
-    (req,res,next) =>{
+  return  (req,res,next) =>{
         Promise.resolve(requestHandler(req,res,next))
         .catch((err)=>next(err))
     }
@@ -9,7 +9,7 @@ const asyncHandler = (requestHandler) =>{
 
 
 
-export {asyncHandler}
+export { asyncHandler }
 
 
 // ^ we are using higher order function  = (fn) => {() => {}}

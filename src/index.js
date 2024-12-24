@@ -2,8 +2,8 @@
 // require('dotenv').config({path : './env'})
 
 import dotenv from 'dotenv'
-
 import connectDB from './db/index.js';
+import {app} from './app.js'
 // when the database is connecting its returning promise so we use .then
 connectDB()
 
